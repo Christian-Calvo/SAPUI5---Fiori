@@ -64,17 +64,6 @@
         "settings": {
           "bundleName": "table.i18n.i18n"
         }
-      },
-      "": {
-        "dataSource": "mainService",
-        "preload": true,
-        "settings": {
-          "synchronizationMode": "None",
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true,
-          "groupId": "$direct"
-        }
       }
     },
     "resources": {

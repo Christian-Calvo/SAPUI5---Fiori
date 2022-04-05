@@ -1,16 +1,106 @@
 <mvc:View
     controllerName="table.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
     xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:table="sap.ui.table"
+	xmlns:dnd="sap.ui.core.dnd"
 >
-    <Shell id="shell">
-        <App id="app">
-            <pages>
-                <Page id="page" title="{i18n>title}">
-                    <content />
-                </Page>
-            </pages>
-        </App>
-    </Shell>
+<App id="app">
+		<pages>
+			<Page id="page" showHeader="false" showNavButton="false" showFooter="true" enableScrolling="false">
+                <table:TreeTable
+                    id="treeTable"
+                    visibleRowCountMode="Auto"
+                    rows="{
+                        path: '/treeTable',
+                        sorter: {
+                            path: 'name'
+                        }
+                    }"
+                    selectionMode="MultiToggle"
+                    enableSelectAll="true"
+                    ariaLabelledBy="title"
+                    rowHeight="40px"
+                    rowSelectionChange="selectedRow"
+                    rowActionCount="1">
+                    <table:extension>
+                        <OverflowToolbar style="Clear">
+                            <Title id="title" text="sap.ui.Table"/>
+                            <ToolbarSpacer/>					
+                            <MenuButton icon="sap-icon://action-settings" id="actionsButton" class="actionButton">
+                                <Menu>
+                                    <items>
+                                        <MenuItem icon="sap-icon://expand-group" text="{i18n>btnExpandAll}" press="onExpandAll" />
+                                        <MenuItem icon="sap-icon://collapse-group" text="{i18n>btnnCollapseAll}" press="onCollapseAll" />
+                                        <MenuItem icon="sap-icon://search" text="{i18n>btnSearch}" press="search" />
+                                        <MenuItem icon="sap-icon://scissors" id="cutButton" text="{i18n>btnCut}" press="onCut"  enabled="false"/>
+                                        <MenuItem icon="sap-icon://undo" id="undoCutButton" text="{i18n>btnUnCut}" press="undoCutButton" enabled="false"/>
+                                        <MenuItem icon="sap-icon://paste" id="pasteButton" text="{i18n>btnPaste}" press="onPaste"  enabled="false"/>
+                                    </items>
+                                </Menu>
+                            </MenuButton>
+                            
+                        </OverflowToolbar>
+                    </table:extension>
+                    <table:dragDropConfig>
+                        <dnd:DragDropInfo
+                                sourceAggregation="rows"
+                                targetAggregation="rows"
+                                dragStart="onDragStart"
+                                drop="onDrop"/>
+                    </table:dragDropConfig>
+                    <table:columns>
+                        <table:Column width="30%" showSortMenuEntry="true" sortProperty="name" filterProperty="name">
+                            <Label text="{i18n>name}"/>
+                            <table:template>
+                                <Text text="{name}" wrapping="false"/>
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" showSortMenuEntry="true" sortProperty="amount" filterProperty="amount">
+                            <Label text="{i18n>amount}"/>
+                            <table:template>
+                                <Text text="{amount}" wrapping="false" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" showSortMenuEntry="true" sortProperty="size" filterProperty="size">
+                            <Label text="{i18n>size}"/>
+                            <table:template>
+                                <Text text="{size}" wrapping="false" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" showSortMenuEntry="true" sortProperty="state" filterProperty="state">
+                            <Label text="{i18n>state}"/>
+                            <table:template>
+                                <Select
+                                        items="{path: '/sizes', templateShareable: true}"
+                                        selectedKey="{size}"
+                                        visible="{= !!${size}}"
+                                        forceSelection="false">
+                                    <core:Item key="{key}" text="{value}"/>
+                                </Select>
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                    <table:rowActionTemplate>
+                        <table:RowAction>
+                                <table:RowActionItem type="Delete" press="delRow" visible="{delete}" icon="sap-icon://delete"/>
+                        </table:RowAction>
+                    </table:rowActionTemplate>
+                </table:TreeTable>
+                <Dialog
+                    title="{i18n>titleDialog}"
+                    class="sapUiContentPadding" 
+                    id="dialogSearch"
+                    visible="false">
+                    <content>
+                        <SearchField id="searchField" width="100%" search="searchDialog"/>
+                    </content>
+                    <beginButton>
+                        <Button text="{i18n>closeDialog}" press="onCloseDialog" />
+                    </beginButton>
+                </Dialog>
+            </Page>
+		</pages>
+	</App>
 </mvc:View>

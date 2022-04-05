@@ -1,0 +1,78 @@
+{
+	"treeTable": {
+		"categories": [
+		  {"name": "Women", "delete": false, "categories": [
+			{"name":"Clothing", "delete": false, "categories": [
+			  {"name": "Dresses", "delete": false, "categories": [
+				{"name": "Casual Red Dress", "amount": 16, "size": "S", "delete": true},
+				{"name": "Short Black Dress", "amount": 47, "size": "M", "delete": false},
+				{"name": "Long Blue Dinner Dress", "amount": 103, "size": "L", "delete": true}
+			  ]},
+			  {"name": "Tops", "delete": true, "categories": [
+				{"name": "Printed Shirt", "amount": 24, "size": "M"},
+				{"name": "Tank Top", "amount": 14, "size": "S"}
+			  ]},
+			  {"name": "Pants", "delete": false, "categories": [
+				{"name": "Red Pant", "amount": 32, "size": "M"},
+				{"name": "Skinny Jeans", "amount": 44, "size": "S"},
+				{"name": "Black Jeans", "amount": 99, "size": "XS"},
+				{"name": "Relaxed Fit Jeans", "amount": 56, "size": "L"}
+			  ]},
+			  {"name": "Skirts", "delete": true, "categories": [
+				{"name": "Striped Skirt", "amount": 24, "size": "M"},
+				{"name": "Black Skirt", "amount": 44, "size": "S"}
+			  ]}
+			]},
+			{"name":"Jewelry", "delete": false, "categories": [
+				{"name": "Necklace", "amount": 16},
+				{"name": "Bracelet", "amount": 47},
+				{"name": "Gold Ring", "amount": 399}
+			  ]},
+			{"name":"Handbags", "delete": true, "categories": [
+			  {"name": "Little Black Bag", "amount": 16, "size": "S"},
+			  {"name": "Grey Shopper", "amount": 47, "size": "M"}
+			]},
+			{"name":"Shoes", "delete": false, "categories": [
+			  {"name": "Pumps", "amount": 89},
+			  {"name": "Sport Shoes", "amount": 47},
+			  {"name": "Boots", "amount": 103}
+			]}
+		  ]},
+		  {"name": "Men", "delete": false, "categories": [
+			{"name":"Clothing", "delete": true, "categories": [
+			  {"name": "Shirts", "delete": false, "categories": [
+				{"name": "Black T-shirt", "amount": 9, "size": "XL"},
+				{"name": "Polo T-shirt", "amount": 47, "size": "M"},
+				{"name": "White Shirt", "amount": 103, "size": "L"}
+			  ]},
+			  {"name": "Pants", "categories": [
+				{"name": "Blue Jeans", "amount": 78, "size": "M"},
+				{"name": "Stretch Pant", "amount": 54, "size": "S"}
+			  ]},
+			  {"name": "Shorts", "categories": [
+				{"name": "Trouser Short", "amount": 62, "size": "M"},
+				{"name": "Slim Short", "amount": 44, "size": "S"}
+			  ]}
+			]},
+			{"name":"Accessories", "categories": [
+			  {"name": "Tie", "amount": 36},
+			  {"name": "Wallet", "amount": 47},
+			  {"name": "Sunglasses", "amount": 199}
+			]},
+			{"name":"Shoes", "categories": [
+			  {"name": "Fashion Sneaker", "amount": 89},
+			  {"name": "Sport Shoe", "amount": 47},
+			  {"name": "Boots", "amount": 103}
+			]}
+		  ]}
+		]
+	},
+
+	"sizes": [
+		{"key": "XS", "value": "Extra Short"},
+		{"key": "S", "value": "Short"},
+		{"key": "M", "value": "Medium"},
+		{"key": "L", "value": "Large"},
+		{"key": "XL", "value": "Extra Large"}
+	]
+}
