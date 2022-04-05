@@ -1,2 +1,2 @@
-# SAPUI5---Fiori
+# SAPUI5-Fiori
 Repositorio de SAPUI5
