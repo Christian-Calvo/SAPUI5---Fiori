@@ -4,7 +4,7 @@ Este repositorio contiene diferentes elementos de SAPUI5 en los cuales se muestr
 
 |               |
 | ------------- |
-|<a href="https://github.com/Christian-Calvo/SAPUI5-Fiori/tree/main/table">**Template**</a><br>Proyecto básico vacío que contiene únicmente la estructura del proyecto|
+|**Template**<br>Proyecto básico vacío que contiene únicmente la estructura del proyecto<br><a href="https://github.com/Christian-Calvo/SAPUI5-Fiori/tree/main/template">Abrir</a>|
 |**TreeTable**<br>Proyecto en el cual se muestra una tabla en árbol de la librería sap.ui con diferentes funciones|
 
 
