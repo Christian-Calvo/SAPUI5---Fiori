@@ -19,7 +19,8 @@
                         }
                     }"
                     selectionMode="MultiToggle"
-                    enableSelectAll="true"
+                    enableSelectAll="false"
+                    enableBusyIndicator="true"
                     ariaLabelledBy="title"
                     rowHeight="40px"
                     rowSelectionChange="selectedRow"
@@ -87,6 +88,9 @@
                                 <table:RowActionItem type="Delete" press="delRow" visible="{delete}" icon="sap-icon://delete"/>
                         </table:RowAction>
                     </table:rowActionTemplate>
+                    <table:rowSettingsTemplate>
+                        <table:RowSettings highlight="{= ${amount} > 50 ? 'Indication04' : null}" />
+                    </table:rowSettingsTemplate>
                 </table:TreeTable>
                 <Dialog
                     title="{i18n>titleDialog}"

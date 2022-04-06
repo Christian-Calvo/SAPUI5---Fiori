@@ -5,7 +5,7 @@ Este repositorio contiene diferentes elementos de SAPUI5 en los cuales se muestr
 |               |
 | ------------- |
 |**Template**<br>Proyecto básico vacío que contiene únicmente la estructura del proyecto|
-|**Table**<br>Proyecto en el cual se muestra una tabla de la librería sap.ui y todas las funciones posibles|
+|**TreeTable**<br>Proyecto en el cual se muestra una tabla en árbol de la librería sap.ui con diferentes funciones|
 
 
 

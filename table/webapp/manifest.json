@@ -69,7 +69,7 @@
     "resources": {
       "css": [
         {
-          "uri": "css/style.css"
+          "uri": "css/style.css?v=0"
         }
       ]
     },

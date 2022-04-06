@@ -1,1 +1,6 @@
 /* Enter your custom styles here */
+
+.hideSelector .sapUiTableRowSelectionCell::after{
+    pointer-events: none !important;
+    display: none !important;
+}
